@@ -58,6 +58,8 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
         $(call project-path-for,qcom-media)/mm-core/inc
 endif
 
+LOCAL_CFLAGS := -fno-strict-aliasing
+
 LOCAL_MODULE:= libmediaplayerservice
 
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS),true)
